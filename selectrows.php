@@ -231,7 +231,7 @@ if (mysqli_num_rows($result) > 0) {
   fputcsv($fp, $fields, $delimiter);
 
   while($row = mysqli_fetch_assoc($result)) {
-    $lineData = array($row['Specimen'], $row['Species'], $row['Initials'], $row['Experiment'], $row['Site'], $row['Visit'], $row['Celltype'], $row['Cellnumber'], $row['Sampledate'], $row['Room'], $row['Freezer'], $row['Cane'], $row['Box'], $row['Row'], $row['Column'], $row['WrittenonTube_Notes'], $row['RemovedfromBoxforELISAfridge'], $row['IgG_Spike'], $row['IgG_SpikeValue'], $row['Counter'], $row['IgGTitration']); 
+    $lineData = array($row['Specimen'], $row['Species'], $row['Initials'], $row['Experiment'], $row['Site'], $row['Visit'], $row['Celltype'], $row['Cellnumber'], $row['Sampledate'], $row['Room'], $row['Freezer'], $row['Cane'], $row['Box'], $row['Row_'], $row['Column_'], $row['WrittenonTube_Notes'], $row['RemovedfromBoxforELISAfridge'], $row['IgG_Spike'], $row['IgG_SpikeValue'], $row['Counter'], $row['IgGTitration']); 
     fputcsv($fp, $lineData, $delimiter); 
   }
 

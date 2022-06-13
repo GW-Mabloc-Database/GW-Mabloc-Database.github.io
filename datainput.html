@@ -1,89 +1,16 @@
-Input values you would like to put into the database. Please fill as many of the fields as possible, otherwise the value will be blank in the database.
-<br />
-<br />
-<form action="inputnewvalues.php" method="post">
-  <input type="text" placeholder="Specimen" id="text1" name="Specimen" /><br />
-  
-  <select id="text2" name="Species">
-    <option value="Select species">-Select species-</option>
-    <option value="Human">Human</option>
-    <option value="Rhesus">Rhesus</option>
-    <option value="Mouse">Mouse</option>
-    <option value="Cell Line">Cell Line</option>
-    <option value="Other">Other</option>
+Upload the CSV file that you would like to upload into the database. <br/>
+<br/>
+<form enctype="multipart/form-data" action="/inputnew.php" method="POST">
+  <input type="file" id="csv" name="csv">
+  <br/>
+  <br/>
+  <input type="submit">
+</form>
 
-  </select><br />
+If necessary, below there is a template for the CSV file. The uploaded file must be in this format, or else bad things will happen.
+<br/>
+<br/>
 
-  <input type="text" placeholder="Initials" id="text3" name="Initials" /><br />
-  <input type="text" placeholder="Experiment" id="text4" name="Experiment"/><br />
-
-  <select id="text5" name="Site">
-    <option value="Select site">-Select site-</option>
-    <option value="1-GreatLakes">1-GreatLakes</option>
-    <option value="2-Biofortis">2-Biofortis</option>
-    <option value="3-IIT">3-IIT</option>
-    <option value="4-HealthAwareness">4-HealthAwareness</option>
-    <option value="5-Pennington">5-Pennington</option>
-    <option value="6-TexasTech">6-TexasTech</option>
-    <option value="7-K2 Medical Research">7-K2 Medical Research</option>
-    <option value="8-Wellness Labs">8-Wellness Labs</option>
-    <option value="99-Gurnee">99-Gurnee</option>
-
-  </select><br />
-
-  <input type="text" placeholder="Visit" id="text6" name="Visit"/><br />
-
-  <select id="text7" name="Celltype">
-    <option value="Select Celltype">-Select Celltype-</option>
-    <option value="PBMC-EDTA">PBMC-EDTA</option>
-    <option value="PBMC-NaHEP">PBMC-NaHEP</option>
-    <option value="PLASMA-EDTA">PLASMA-EDTA</option>
-    <option value="PLASMA-NaHEP">PLASMA-NaHEP</option>
-    <option value="SERUM-SST">SERUM-SST</option>
-  </select><br />
-
-  <input type="text" placeholder="Sample Date" id="text8" name="SampleDate"/><br />
-  <input type="text" placeholder="Room" id="text9" name="Room"/><br />
-  <input type="text" placeholder="Freezer" id="text10" name="Freezer"/><br />
-  <input type="text" placeholder="Cane" id="text11" name="Cane" /><br />
-  <input type="text" placeholder="Box" id="text12" name="Box"/><br />
-  <input type="text" placeholder="Row" id="text13" name="Row"/><br />
-  <input type="text" placeholder="Column" id="text14" name="Column"/><br />
-  <input type="text" placeholder="Written On Tube/Notes" id="text15" name="Notes"/><br />
-
-  <select id="text16" name="ELISA">
-    <option value="Removed from Box for ELISA Fridge?">-Removed from Box for ELISA Fridge?-</option>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-  </select><br />
-
-  <select id="text17" name="IgG/Spike">
-    <option value="IgG/Spike">-IgG/Spike-</option>
-    <option value="Positive">Positive</option>
-    <option value="Negative">Negative</option>
-    <option value="In-prog">In-prog</option>
-    <option value="TBD">TBD</option>
-  </select><br />
-
-  <select id="text18" name="IgG/SpikeValue">
-    <option value="IgG/Spike Value">-IgG/Spike Value-</option>
-    <option value="Positive">Positive</option>
-    <option value="Negative">Negative</option>
-    <option value="In-prog">In-prog</option>
-    <option value="TBD">TBD</option>
-  </select><br />
-
-  <input type="text" placeholder="Counter" id="text19" name="Counter"/><br />
-
-  <select id="text20" name="IgG/Titration">
-    <option value="IgGTitration">-IgGTitration-</option>
-    <option value="Positive">Positive</option>
-    <option value="Negative">Negative</option>
-    <option value="In-prog">In-prog</option>
-    <option value="TBD">TBD</option>
-  </select><br />
-  <br />
-
-  <input type="submit" />
- 
+<form>
+  <input type="button" value="Download Template" onclick="location.href='downloadTemplate.php'" />
 </form>
