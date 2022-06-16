@@ -99,7 +99,7 @@ function deleterows() {
 
       if ($sampID != "") {
       	 $backupinsertion1 = $backupinsertion1 . "SampleID,";
-	 $backupinsertion2 = $backupinsertion2 . $sampID . ",";
+	 $backupinsertion2 = $backupinsertion2 . '"' . $sampID . '",';
       }
 
       if ($deletedOn != "") {
